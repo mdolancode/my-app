@@ -52,6 +52,7 @@ class Game extends React.Component {
           squares: Array(9).fill(null),
         },
       ],
+      stepNumber: 0,
       xIsNext: true,
     };
   }
@@ -107,7 +108,7 @@ class Game extends React.Component {
         <div className="game-board">
           <Board
             squares={current.squares}
-            onClick={(i) => this.handleClisk(i)}
+            onClick={(i) => this.handleClick(i)}
           />
         </div>
         <div className="game-info">
